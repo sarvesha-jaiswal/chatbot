@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <center>
+        <h1>
+          AI ChatBot
+        </h1>
+    </center>
+      
+      <div class="boxed">
+          
+        <div>
+          <div id="chatbox">
+            <p class="botText">
+              <span>Hi! I'm ChatBot</span>
+            </p>
+            <p class="botText">
+              <span>How can I help you today?</span>
+            </p>
+            <br>
+            <br>
+            
+          </div>
+          <div id="userInput">
+            <input id="textInput" type="text" name="msg" placeholder="Enter message here..." />
+          </div>
+        </div>
+        <script>
+          document.getElementById("doctors").addEventListener("click",openList);
+          function openList(){
+          document.getElementById("list_doctors").style.display="block";
+          }
+        </script>
+        <script>
+            document.getElementById("icon").addEventListener("click",openBot);
+          function openBot(){
+            if(document.getElementsByClassName("boxed")[0].style.display=="block")
+            {
+                document.getElementsByClassName("boxed")[0].style.display="none";
+            }
+            else{
+                document.getElementsByClassName("boxed")[0].style.display="block";
+            }
+          }
+          document.getElementById("close").addEventListener("click",close);
+          function close(){
+              document.getElementsByClassName("boxed")[0].style.display="none";
+          }
+        </script>
+        </div>
+</body>
+</html>
